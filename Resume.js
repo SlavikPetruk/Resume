@@ -15,6 +15,7 @@ document.addEventListener('scroll', (event)=>{
         btnToTop.style.display = 'flex'
         btnToTop.addEventListener('click', () => {
             document.documentElement.scrollTop = 0
+            scrollTop.scrollIntoView({behavior:"smooth"})
         })
     }
 })
