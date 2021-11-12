@@ -40,3 +40,20 @@ const changeColor =()=> {
         }
 } 
 changeColor()
+
+//----------- modal------------
+
+const modal = document.querySelector('.modal')
+const overlay = document.querySelector('.overlay')
+const btnsOpen = document.querySelectorAll('.site_img')
+const btnClose = document.querySelector('.closeModal')
+
+const toggleModal = () => {
+    modal.classList.toggle('hiddens')
+    overlay.classList.toggle('hiddens')
+}
+for (let i = 0; i < btnsOpen.length; i++) {
+    btnsOpen[i].addEventListener('click', toggleModal)
+}
+btnClose.addEventListener('click', toggleModal)
+overlay.addEventListener('click', toggleModal)
