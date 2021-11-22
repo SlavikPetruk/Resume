@@ -22,21 +22,15 @@ document.addEventListener('scroll', (event)=>{
 
 
 //-------------------- change background color -------------------
-document.querySelector('.changeBG').addEventListener('click', (e) => {
-    e.preventDefault()
-    if ( localStorage.getItem('theme') === 'blue') { 
-        localStorage.removeItem('theme')
-    } else { 
-        localStorage.setItem('theme','blue') 
-    }
-    changeColor ()
-    })
 
+document.querySelector('.changeBG').addEventListener('click', (e) => {
+    if ( localStorage.getItem('theme') === 'blue') { localStorage.removeItem('theme') }
+     else { localStorage.setItem('theme','blue') }
+    changeColor ()})
+    
 const changeColor =()=> {
-        if (localStorage.getItem('theme') === 'blue') {
-          document.querySelector('html').classList.add('blue')
-        } else {
-          document.querySelector('html').classList.remove('blue')
+    if (localStorage.getItem('theme') === 'blue') { document.querySelector('html').classList.add('blue') }
+     else { document.querySelector('html').classList.remove('blue')
         }
 } 
 changeColor()
@@ -55,5 +49,11 @@ const toggleModal = () => {
 for (let i = 0; i < btnsOpen.length; i++) {
     btnsOpen[i].addEventListener('click', toggleModal)
 }
+
+function myFunction() {
+  var x = document.getElementsByClassName("site_img")[0].id;
+  console.log(x)
+}
+
 btnClose.addEventListener('click', toggleModal)
 overlay.addEventListener('click', toggleModal)

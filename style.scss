@@ -15,7 +15,7 @@
 
 body {
     background: linear-gradient(45deg, #EECFBA, #C5DDE8);
-        margin: 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
@@ -339,10 +339,13 @@ body {
         display: none;
     }
 
-    body .main-content {
-        width: 94%;
+    body .main{
+        margin: 4%;  
+        width: 92%;            
+
+        .main-content {
         grid-template-columns: repeat(1, 1fr);
-        margin: 1rem;
+        border-radius: 5px;
 
         .right-section {
             grid-column: span 5;
@@ -350,6 +353,7 @@ body {
             height: 100%;
         }
     }
+  }
 
 }
 
@@ -385,6 +389,7 @@ body {
     
     .left-section{
         grid-column: span 3;
+        border-radius: 5px;
     }
 
     .right-section {
@@ -403,9 +408,8 @@ body {
 @media (max-width:681px) {
 
     body .main-content {
-        width: 94%;
         grid-template-columns: repeat(1, 1fr);
-        margin: 1rem;
+        
 
         .right-section {
             grid-column: span 5;

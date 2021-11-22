@@ -366,13 +366,16 @@ body {
   .changeBG {
     display: none;
   }
-  body .main-content {
-    width: 94%;
+  body .main {
+    margin: 4%;
+    width: 92%;
+  }
+  body .main .main-content {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
-    margin: 1rem;
+    border-radius: 5px;
   }
-  body .main-content .right-section {
+  body .main .main-content .right-section {
     grid-column: span 5;
     background-color: #f7f7f7;
     height: 100%;
@@ -401,6 +404,7 @@ body {
 @media screen and (max-width: 780px) {
   .left-section {
     grid-column: span 3;
+    border-radius: 5px;
   }
   .right-section {
     grid-column: span 4;
@@ -413,10 +417,8 @@ body {
 
 @media (max-width: 681px) {
   body .main-content {
-    width: 94%;
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
-    margin: 1rem;
   }
   body .main-content .right-section {
     grid-column: span 5;
